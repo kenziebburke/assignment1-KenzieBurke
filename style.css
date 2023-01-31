@@ -1,0 +1,661 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { box-sizing: border-box; font-size:125%;}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+/* DESIGN REMEMBER  */
+/* 
+#201E21 = DARK
+#14171F = DARK TWO
+#FABA63 = APRICOT
+#FFFFFF = WHITE
+*/
+
+/* GLOBAL STYLES +++++++++++++++++++++++++++++++++++++++ */
+html{
+    color: #fff;
+}
+
+/* background colors alternating between sections */
+header,
+.gallery,
+.blog{
+    background-color: #201E21;
+}
+
+.about,
+.icon,
+.contact{
+    background-color: #14171f;
+}
+
+/* getting the images to take up all the available space in their containers */
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* stripping anchor styling */
+a{
+    text-decoration: none;
+}
+
+/* again stripping default styling */
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+figure{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+
+.wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.flexContainer{
+    display: flex;
+}
+
+/* styling the button */
+button{
+    font-family: 'Italiana', serif;
+    font-size: 1.25rem;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+/* TYPOGRAPIC STYLES+++++++++++++++++++++++++++++++++++++++ */
+h1,
+h2,
+h3{
+    margin: 0;
+    padding: 0;
+    font-family: 'Italiana', serif;
+}
+
+h1{
+    font-size: 8.1rem;
+}
+
+p{
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.45rem;
+}
+
+/* MAIN STYLING ============================ */
+
+/* HEADER STYLES ++++++++++++++++++++++++++++++++++++++++++ */
+header{
+    background-image: url(./arora/assets/header-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+/* nav styling */
+header .flexContainer{
+    justify-content: space-between;
+}
+
+header nav{
+    width: 40%;
+}
+
+header nav label,
+header nav input{
+    display:none;
+}
+
+header a{
+    color: #faba63;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* h1+2 styling */
+header h1{
+    line-height: 7rem;
+    text-transform: uppercase;
+    text-align: right;
+    width: 50%;
+    margin-top: 170px;
+    position: relative;
+}
+
+
+header h1 span{
+    display: block;
+}
+
+/* styling the "-" before and after the h1 "ARO" */
+header h1 span::before{
+    content: '';
+    width: 60px;
+    border-bottom: solid 2px #fff;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+header h1 span::after{
+    content: '';
+    width: 60px;
+    border-bottom: solid 2px #fff;
+    position: absolute;
+    top: 30%;
+}
+
+header h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 2.25rem;
+    color: #faba63;
+    font-weight: 300;
+    margin: 0 140px 30px 0;
+    text-align: center;
+}
+
+/* styling icons */
+header .headerIcons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 120px;
+    margin: 0 30px 30px 0;
+
+}
+
+header .headerIcons a{
+    color: #fff;
+}
+
+/* ABOUT SECTION+++++++++++++++++++++++++++++++++++++++++++++ */
+.about{
+    padding: 80px 0;
+}
+
+.about h2{
+    font-size: 2.55rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* hidding media querie img */
+.about .flexContainer div .img2{
+    display: none;
+}
+
+
+/* figure styling */
+/* setting a width on the flex children */
+.about figure{
+    width: 30%;
+}
+
+
+/* article styling */
+/* setting a width on the flex children */
+.about article{
+    width:70%;
+    margin-left: 30px;
+}
+
+.about article p{
+    margin-bottom: 15px;
+}
+
+.about article button{
+    background-color: #14171f;
+    border: 3px solid #14171f;
+}
+
+/* putting the border around the button w/respect to accessibility */
+.about button:hover, 
+.about button:focus{
+    border: 3px solid #faba63;
+}
+
+/* GALLERY STYLING +++++++++++++++++++++++++++++++++++++++++*/
+.gallery{
+    padding: 70px 0 90px 0;
+}
+.gallery h2{
+    font-size: 2.55rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+/* flexing gallery */
+.flexContainerGallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flexContainerGallery li{
+    flex-basis: 32%;
+}
+
+
+/* ICON SECTION STYLING ++++++++++++++++++++++++++++++++++++*/
+.icon{
+    min-height: 45vh;
+}
+
+.icon .flexContainer{
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* centering elements within the flexIcon containers */
+.flexIcon{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.icon h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.icon i{
+    color: #faba63;
+    font-size: 3rem;
+}
+
+
+/* BLOG STYLING++++++++++++++++++++++++++++++++++++++++++++ */
+/* blog general styling */
+.blog{
+    min-height: 100vh;
+}
+
+.blog h2{
+    font-size: 2.55rem;
+    text-transform: uppercase;
+}
+
+.blog p{
+    padding-bottom: 25px;
+}
+
+/* button styling */
+.blog article button{
+    background-color: #201E21;
+    border: 3px solid #201E21;
+}
+
+/* putting the border around the button w/respect to accessibility */
+.blog button:hover, 
+.blog button:focus{
+    border: 3px solid #faba63;
+}
+
+/* hiding the media queries img */
+.blog .blog1 .mediaBlog{
+    display: none;
+}
+/* figure out the padding here something is still a lil sticky here!!!!!!!!!!!!!!!!!!! */
+/* blog flex and layout */
+.blog figure{
+    width: 50%;
+}
+.blog article{
+    width: 50%;
+}
+
+/* giving padding to the articles to that they mimic the wrapper */
+.blog .blog1 article{
+    padding: 90px 30px 0px 60px;
+}
+
+.blog .blog2 article{
+    padding: 90px 60px 0px 55px;
+}
+
+
+
+/* CONTACT STYLING ++++++++++++++++++++++++++++++++++++++++ */
+.contact{
+    padding: 70px 0;
+}
+
+.contact h2{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.contact .contactForm p{
+    margin-bottom: 7px;
+}
+
+/* fixing the styling with flexbox */
+.contact nav ul,
+.contact .form,
+.contact .contactInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+/* adding the spaces between the elements in the contact using flex grow giving the contact form a little more space */
+.contact nav,
+.contact ,.contactInfo{
+    flex-grow: 1;
+}
+
+.contact .contactForm{
+    flex-grow: 2;
+}
+
+/* styling the a tags in the nav */
+.contact nav li a{
+    color: #fff;
+    font-family: 'Italiana', serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.contact .contactInfo{
+    text-align: right;
+}
+
+/* styling the contact form */
+.contact .contactForm h2, 
+.contact .contactForm p{
+    text-align: center;
+}
+
+.contact nav ul li, 
+.contact .contactInfo{
+    flex-shrink: 2;
+}
+
+.contact .contactForm form{
+    display: flex;
+    margin-left: 20px;
+}
+
+.contact form input{
+    width: 70%;
+    border: none;
+    text-align: center;
+    padding: 8px;
+}
+
+.contact form button{
+    background-color: black;
+    border: 1px solid black;
+    padding: 5px 11px;
+    display: inline;
+    vertical-align: middle;
+}
+
+
+/* FOOTER STYLING ++++++++++++++++++++++++++++++++++++++++++*/
+footer{
+    background-color: #000;
+    padding: 10px 0;
+}
+footer p{
+    text-align: center;
+}
+
+
+/* MEDIA QUERIES @ VARYING BREAK POINTS ON THE PAGE */
+@media (max-width:820px){
+/* HEADER STYLES*/
+header{
+    background-image: url(./arora/assets/header-1.jpg);
+}
+header h1 span::before{
+    width: 60px;
+    left: 0;
+}
+
+.headerIcons{
+    position: relative;
+    top: 150px;
+}
+
+header h1 span::before,
+header h1 span::after{
+    width: 30px;
+}
+
+/* ABOUT STYLING ++++++++++++++++++++++++++++++++++++++++ */
+.about .flexContainer{
+    flex-wrap: wrap;
+}
+
+/* hiding monitor img */
+.about .flexContainer .img1{
+    display: none;
+}
+
+/* displaying mobile img */
+.about .flexContainer div .img2{
+    display: block;
+    width: 100%;
+}
+
+/* fixing the width of the article */
+.about .flexContainer article{
+    width: 100%;
+}
+
+.about .flexContainer article h2{
+    font-size: 1.5rem;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.about .flexContainer article p{
+    font-weight: 300;
+}
+
+/* !!!!!!!!come back to center button!!!!!! */
+.about .flexContainer button{
+    
+}
+
+/* ICON STYLING +++++++++++++++++++++++++++++++++++++++++++ */
+.icon{
+    min-height: 25vh;
+}
+
+/* BLOG STYLING +++++++++++++++++++++++++++++++++++++++++++ */
+/* changing the first blog to column */
+.blog .blog1,
+.blog .blog2{ 
+    flex-direction: column;
+}
+
+/* hiding and also showing the appropriate imgs + img styling*/
+.blog .blog1 figure{
+    display: none;
+}
+
+.blog .blog1 .mediaBlog{
+    display: block;
+}
+
+.blog .blog2 figure{
+    width: 100%;
+}
+
+/* adding a wrapper to the blog */
+.blog article{
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* styling the typography */
+.blog article h2{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.blog article p{
+    font-weight: 300;
+}
+
+/* fixing article padding top */
+.blog .blog1 article{
+    padding: 45px 0 30px 0;
+}
+
+.blog .blog2 article{
+    padding: 45px 0 30px 0;
+}
+
+/* center button */
+
+}
+
+
+
+
+
+
+/* MEDIA QUERIES FOR MOBILE +++++++++++++++++++++++++++++++ */
+@media (max-width: 510px){
+
+/* HEADER QUERIES+++++++++++++++++++++++++++++++++++++ */
+header{
+    background-image: url(./arora/assets/header-1.jpg);
+    padding: 0;
+}
+/* nav styling */
+header nav{
+    width: 100%;
+}
+
+/* making the hamburger visible after having it as display none in the desktop styling */
+header nav label{
+    display:block;
+    font-size: 3rem;
+}
+
+/* moving the hamburger to the right (flex-end) */
+header .hamburger{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav .flexContainer{
+    display: none;
+}
+
+
+/* header h1+h2 styling */
+header h1{
+    font-size: 4rem;
+    line-height: 4.2rem;
+}
+
+header h1 span::before{
+    width: 30px;
+    left: 1%;
+}
+
+header h2{
+    font-size: 1.5rem;
+    margin-right: 100px;
+}
+
+header h1 span::after{
+    width: 30px;
+}
+
+
+/* icon styling */
+header .headerIcons{
+    display: none;
+}
+
+/* about styling done earlier============================== */
+
+/* GALLERY STYLING ++++++++++++++++++++++++++++++++++++++++ */
+.gallery h2{
+    font-size: 1.5rem;
+}
+
+.gallery ul li .img3{
+    display: none;
+}
+
+.gallery ul li{
+    flex-basis: 47%;
+}
+
+/* ICON STYLING +++++++++++++++++++++++++++++++++++++++++++ */
+.icon .flexContainer{
+    flex-direction: column;
+    padding: 10% 0 20% 0;
+}
+
+/* blog styling done earlier ============================== */
+
+/* CONTACT STYLING ++++++++++++++++++++++++++++++++++++++++ */
+/* changing flex direction */
+.contact .flexContainer{
+    flex-direction: column;
+}
+/* changing the flex on the contact nav */
+.contact nav ul{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* styling the form */
+.contact .contactForm{
+    padding: 30px 0;
+}
+
+.contact .contactForm h2{
+    padding-bottom: 10px;
+}
+
+.contact form{
+    flex-direction: column;
+}
+
+.contact .contactForm form input{
+    display: block;
+    width: 100%;
+}
+.contact .contactForm form button{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contact .contactInfo{
+    text-align: center;
+    padding-top: 30px;
+}
+}
